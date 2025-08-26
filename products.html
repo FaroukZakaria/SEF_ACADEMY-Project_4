@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container d-flex justify-content-between align-items-center p-4 mb-4 bg-body-tertiary">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.webp" alt="Logo" style="max-width: 300px; max-height: 100px;"></a>
+            </div>
+            <div id="user-btns" class="d-flex align-items-center justify-content-center gap-2">
+                <p id="welcome-user" class="my-0"></p>
+                <a id="cartBtn" class="mx-3">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="badge text-primary fs-5 p-0">0</span>
+                </a>
+                <div id="cart-preview" class="position-absolute bg-light border rounded p-2 mt-2 z-2" style="top:80px; right:0; width:250px; display:block; height:auto">
+                    Your cart is empty
+                </div>
+                <a id="loginBtn" href="login.html" class="btn btn-outline-primary">Login</a>
+                <a id="registerBtn" href="register.html" class="btn btn-outline-success">Register</a>
+                <a id="logoutBtn" href="login.html" class="btn btn-outline-danger">Log out</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <div class="container">
+        <div class="row row-cols-2 g-2">
+            <div class="col">
+                <div class="d-flex align-items-stretch border rounded p-3 h-100">
+                    <div style="width:120px; height:100%; overflow:hidden;" class="me-3">
+                        <img src="https://via.placeholder.com/120x300" alt="Product 1" style="height:100%; width:100%; object-fit:cover;">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between flex-grow-1">
+                        <div>
+                            <h4>Product 1</h4>
+                            <p class="mb-1">Price: $19.99</p>
+                            <p class="mb-2">Category: Electronics</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span>1</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-danger btn-sm">Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex align-items-stretch border rounded p-3 h-100">
+                    <div style="width:120px; height:100%; overflow:hidden;" class="me-3">
+                        <img src="https://via.placeholder.com/120x300" alt="Product 2" style="height:100%; width:100%; object-fit:cover;">
+                    </div>
+                    <div class="d-flex flex-column justify-content-between flex-grow-1">
+                        <div>
+                            <h4>Product 2</h4>
+                            <p class="mb-1">Price: $29.99</p>
+                            <p class="mb-2">Category: Books</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span>2</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-danger btn-sm">Remove from cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="text-center mt-4">Total price: $<span id="total-price">49.98</span></h3>
+    <hr>
+    <div class="container mt-4">
+        <h4 class="text-center">Favorite items</h4>
+        <hr style="border-top: 2px solid red;" class="w-25 mx-auto mb-4">
+        <div class="favorite-items d-flex flex-row overflow-auto gap-3 py-3">
+            <div class="d-flex flex-column align-items-center border rounded p-3" style="min-width:200px;">
+                <img src="https://via.placeholder.com/200x150" alt="Favorite 1" style="width:100%; height:auto; object-fit:cover;">
+                <h5 class="mt-2 mb-1">Favorite 1</h5>
+                <p class="mb-1">Category: Gadgets</p>
+                <i class="fa fa-heart text-danger fs-4"></i>
+            </div>
+            <div class="d-flex flex-column align-items-center border rounded p-3" style="min-width:200px;">
+                <img src="https://via.placeholder.com/200x150" alt="Favorite 2" style="width:100%; height:auto; object-fit:cover;">
+                <h5 class="mt-2 mb-1">Favorite 2</h5>
+                <p class="mb-1">Category: Fashion</p>
+                <i class="fa fa-heart text-danger fs-4"></i>
+            </div>
+            <div class="d-flex flex-column align-items-center border rounded p-3" style="min-width:200px;">
+                <img src="https://via.placeholder.com/200x150" alt="Favorite 3" style="width:100%; height:auto; object-fit:cover;">
+                <h5 class="mt-2 mb-1">Favorite 3</h5>
+                <p class="mb-1">Category: Home</p>
+                <i class="fa fa-heart text-danger fs-4"></i>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!--////////////////////////////////////// -->
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
